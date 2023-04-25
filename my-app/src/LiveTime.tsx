@@ -34,10 +34,10 @@ function LiveTime() {
   // Return start and end times as ticksy
   return (
     <div>
-   {startTimeFormatted}
-   {endTimeFormatted}
-    {startTimeTicks},
-    {endTimeTicks}
+   
+  <div>{startTimeFormatted}: {startTimeTicks}</div>
+  <div>{endTimeFormatted}: {endTimeTicks}</div>
+    
     </div>
   )
 }
