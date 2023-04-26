@@ -16,13 +16,13 @@ function LiveTime() {
   }, []);
 
   // Set start and end times for a particular day (January 27, 2022)
-  const startTimeIST = setHours(new Date("2023-04-24"),10);
+  const startTimeIST = setHours(new Date("2023-04-26"),10);
   const endTimeIST = setHours(new Date("2023-05-27"), 11);
 
   // Convert start and end times to ticks
-  const startTimeTicks = (startTimeIST.getTime() * 10000);
+  const startTimeTicks = (((startTimeIST.getTime() -startTimeIST.getTimezoneOffset()*60000))* 10000)
   //const startTimeTicks = startTimeIST.getTime()
-  const endTimeTicks = (endTimeIST.getTime() * 10000);
+  const endTimeTicks = (((endTimeIST.getTime() -endTimeIST.getTimezoneOffset()*60000))* 10000)
 
   
   const startTimeFormatted = format(startTimeIST, 'yyyy-MM-dd HH:mm:ss');
